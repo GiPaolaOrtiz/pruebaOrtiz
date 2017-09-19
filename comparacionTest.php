@@ -1,18 +1,18 @@
 <?php
-require 'Calculator.php';
+require 'Comparacion.php';
  
-class CalculatorTests extends PHPUnit_Framework_TestCase
+class ComparacionTests extends PHPUnit_Framework_TestCase
 {
-    private $calculator;
+    private $comparacion;
  
     protected function setUp()
     {
-        $this->calculator = new Calculator();
+        $this->comparacion = new Comparacion();
     }
  
     protected function tearDown()
     {
-        $this->calculator = NULL;
+        $this->comparacion= NULL;
     }
  
     public function testAdd()
