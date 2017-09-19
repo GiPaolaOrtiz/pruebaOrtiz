@@ -4,7 +4,7 @@ include_once('museo.php');
 include_once("../../modelo/Collector.php");
 
 
-class ciudadnCollector extends Collector
+class museoCollector extends Collector
 {
   
   function showMuseos() {
@@ -16,12 +16,21 @@ class ciudadnCollector extends Collector
     }
     return $arrayMuseo;        
   }
-    
-   
+    function showciudadn($id) {
+    $row = self::$db->getRows("SELECT * FROM ciudadN where idciudad= ?", array("{$id}"));
+    $ObjCiudadn= new ciudadn($row[0]{'idciudad'},$row[0]{'nombre'});
+    return $ObjCiudadn;        
+  }
+
+  function updateCiudadn($id, $nombre){
+      $insertrow= self::$db->updateRow
+                  ("UPDATE public.ciudadN SET nombre= ? where idciudadn = ?", 
+                  array( "{$nombre}",$id ));
+  }
 
   function deleteMuseo($id){
     $insertrow= self::$db->deleteRow
-                  ("DELETE FROM public.museo where id = ?", 
+                  ("DELETE FROM public.museo where id= ?", 
                   array( $id ));
   }
   function createCiudadn($nombre){

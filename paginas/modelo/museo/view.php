@@ -52,23 +52,25 @@ session_start();
         </nav>
 
         <?php 
-            include_once("../../modelo/ciudadN/ciudadnCollector.php");
-            $ciudadnCollectorObj = new ciudadnCollector();
+            include_once("../../modelo/museo/museoCollector.php");
+            $museoCollectorObj = new museoCollector();
                 echo '<h2 class="topspace text-center">Ciudades</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
-                        echo '<th>Nombre Ciudad</th>';
+                        echo '<th>Nombre Museo</th>';
+                      echo '<th>ID Ciudad</th>';
                         echo '<th>Acciones</th>';
                     echo '</tr> </thead><tbody>';            
                 
-                      foreach ($ciudadnCollectorObj->showciudadesn() as $c){
+                      foreach ($museoCollectorObj->showMuseos() as $c){
                           
                           echo '<tr>'; 
                               echo '<td>' . $c->getIdciudad() . '</td>';
                               echo '<td>' . $c->getNombre() . '</td>';
+                            echo '<td>' . $c->getIdciudad() . '</td>';
                               echo "<td> <a href='formularioeditar.php?id=" . $c->getIdciudad() . "' class='btn btn-info mg'>Editar</a>";
                               echo "<a href='eliminar.php?id=" . $c->getIdciudad() . "' class='btn btn-info'>Delete</a></td>";
                           echo '</tr>'; 

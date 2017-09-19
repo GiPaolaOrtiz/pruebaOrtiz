@@ -59,12 +59,12 @@ session_start();
             <?php
                 $id=$_GET['id'];
             
-                include_once("../../modelo/rol/rolCollector.php");
-                $rolCollectorObj = new rolCollector();
+                include_once("../../modelo/museo/museoCollector.php");
+                $museoCollectorObj = new museoCollector();
                
-                $rolCollectorObj-> deleteRol($id);
+                $museoCollectorObj-> deleteMuseo($id);
 
-                echo "<h3 class='topspace text-center'>El rol ha sido eliminado</h3>";
+                echo "<h3 class='topspace text-center'>El museo</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>
