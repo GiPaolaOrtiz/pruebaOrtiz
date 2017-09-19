@@ -64,7 +64,7 @@ session_start();
                
                 $museoCollectorObj-> deleteMuseo($id);
 
-                echo "<h3 class='topspace text-center'>El museo</h3>";
+                echo "<h3 class='topspace text-center'>El museooooo</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>
