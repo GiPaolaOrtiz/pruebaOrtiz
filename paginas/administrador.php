@@ -129,6 +129,16 @@ session_start();
                     <div class="col-md-4  col-sm-6">
                         <a href="modelo/venta/view.php" class="btn btn-info topspace2">Ventas</a>
                     </div>
+                    
+                    
+                     <div class="col-md-4  col-sm-6">
+                        <a href="modelo/museo/view.php" class="btn btn-info topspace2">Museo</a>
+                    </div>
+                    
+                    <div class="col-md-4  col-sm-6">
+                        <a href="modelo/ciudadN/view.php" class="btn btn-info topspace2">Ciudad Nueva</a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
